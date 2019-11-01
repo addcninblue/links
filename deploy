@@ -1,0 +1,8 @@
+#!/bin/bash
+git checkout -b deploy && \
+touch requirements.txt && git add requirements.txt && \
+git add -f ./_build/prod/rel/links_web/ && \
+git commit -m "deployment" && \
+git push --force dokku deploy:master && \
+git checkout - && \
+git branch -D deploy
