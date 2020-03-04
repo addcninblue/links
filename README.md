@@ -11,5 +11,5 @@ Tests are in progress.
   - Copy the spreadsheet key as well as the sheet names. The relevant url is `https://docs.google.com/spreadsheets/d/1kA8o_QyoVeXkhu9PZZoZSJUy1xRczvNDPAeYMS_Cfy8/export?format=csv&id=#{spreadsheet_key}&gid=#{sheet_name}`
 2. Clone and build the elixir app.
   - Get dependencies: `mix deps.get`
-  - Build: `DEFAULT_SITE=__YOUR_SITE__ SPREADSHEET_KEY=__YOUR_SPREADSHEET__ SHEET_NAMES=__COMMA_SEPARATED_SHEET_NAMES__ MIX_ENV=prod mix distillery.release --env=prod`
-  - Run: `sudo _build/prod/rel/links/bin/links foreground`
+  - Build: `MIX_ENV=prod mix release --overwrite`
+  - Run: `_build/prod/rel/links_web/bin/links_web start`
